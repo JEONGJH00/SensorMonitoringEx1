@@ -41,8 +41,6 @@ namespace SensorMonitoringEx1
             // Chart 세팅
             ChartSetting();
 
-            // txtCount
-            txtCount.TextAlign = HorizontalAlignment.Center;
 
             // Connect, DistConnect 버튼
             btnConnect.Enabled = false;
@@ -323,11 +321,7 @@ namespace SensorMonitoringEx1
                 chart2.Series["활동량"].Points.AddXY("6시", PIRData[8]);
             else if (DateTime.Now.Hour == 8 && DateTime.Now.Minute == 0)
                 chart2.Series["활동량"].Points.AddXY("7시", PIRData[9]);
-            
-       
-
         }
-
 
         private void btnDisConnect_Click(object sender, EventArgs e)
         {
