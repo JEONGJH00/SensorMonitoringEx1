@@ -19,7 +19,7 @@ namespace SensorMonitoringEx1
 
         private int cnt; // 심박센서 버리지 않은 측정 횟수
 
-        // 12시간을 1시간 단위로 나눠서 배열에 센서값을 넣음
+        // 10시간을 1시간 단위로 나눠서 배열에 센서값을 넣음
         int[] HeartData = new int[10]; // 1시간 단위로 심박센서 값을 넣을 배열
         int[] PIRData = new int[10]; // 1시간 단위로 PIR센서 값을 넣을 배열
 
