@@ -251,7 +251,7 @@ namespace SensorMonitoringEx1
 
 
 
-        }
+        }//
 
         // PIR 센서 ShowValue
         private void ShowValue2(string s2)
