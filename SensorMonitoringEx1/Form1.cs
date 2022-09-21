@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Windows.Forms.DataVisualization.Charting;
-using System.Data.SqlClient;
 using System.Drawing.Text;
 
 namespace SensorMonitoringEx1
