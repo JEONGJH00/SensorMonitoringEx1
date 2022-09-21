@@ -18,11 +18,14 @@ namespace SensorMonitoringEx1
     {
         private SerialPort sPort;
         private int cnt; // 심박센서 버리지 않은 측정 횟수
-        private int v1=50; // s1(문자열로 넘어오는 심박센서값)을 Int32.Parse(s1)(정수형을 변환)값을 넣을 변수 
-        private int HeartMax = 35; // 심박센서의 최대값 . Int32.Parse(s1)의 범위 중 최소값으로 설정
-        private int HeartMin = 110; // 심박센서의 최소값. Int32.Parse(s1)의 범위 중 최대값으로 설정
+        private int v1=50; // s1(문자열로 넘어오는 심박센서값)을 Int32.Parse(s1)(정수형으로 변환)값을 넣을 변수
+                           // 심박센서의 최소값을 구하기 위해 50으로 초기화
+
+        private int HeartMax; // 심박센서의 최대값 . 최대값을 구하기 위해 Int32.Parse(s1)의 범위 중 최소값으로 설정
+        private int HeartMin = 110; // 심박센서의 최소값. 최소값을 구하기 위해 Int32.Parse(s1)의 범위 중 최대값으로 설정
         private int PIRMax;  // PIR센서의 최대값 ( 간격 1시간 )
-        private int PIRMin=3600; // PIR센서의 최소값( 간격 1시간 ). 1시간동안 측정할 수 있는 범위 중 최대값으로 설정 
+        private int PIRMin=3600; // PIR센서의 최소값( 간격 1시간 )
+                                 // 최소값을 구하기 위해 1시간동안 측정할 수 있는 범위 중 최대값으로 설정 
 
         // 10시간을 1시간 단위로 나눠서 배열에 센서값을 넣음
         int[] HeartData = new int[10]; // 1시간 단위로 심박센서 값을 넣을 배열
